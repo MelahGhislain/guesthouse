@@ -86,15 +86,36 @@ const CostEstomator = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 w-full h-64 hidden md:block">
-            <Image
-              src="/assets/images/1.jpg"
-              alt="..."
-              width="100%"
-              height="50%"
-              layout="responsive"
-              objectFit="cover"
-            />
+          <div className="flex-1 w-full h-64">
+            <h2 className="text-3xl font-bold text-blue-700 mb-4">
+              How the cost is calculated
+            </h2>
+            <ul>
+              <li className="mb-4 flex">
+                <span className="mr-4 text-md">-</span>
+                <p>
+                  An apprtment costs XAF <span className="text-red-500">20,000</span> for
+                  1-6 days and XAF <span className="text-red-500">18,0000</span> form the
+                  7 days and above
+                </p>
+              </li>
+              <li className="mb-4 flex">
+                <span className="mr-4 text-md">-</span>
+                <p>
+                  A Morden Studio (room and parlor) costs XAF{' '}
+                  <span className="text-red-500">15,000</span> for 1-6 days and XAF
+                  <span className="text-red-500">14,0000</span> form the 7 days and above
+                </p>
+              </li>
+              <li className="mb-4 flex">
+                <span className="mr-4 text-md">-</span>
+                <p>
+                  A Single room costs XAF <span className="text-red-500">10,000</span> for
+                  1-6 days and XAF <span className="text-red-500">9,0000</span> form the 7
+                  days and above
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
