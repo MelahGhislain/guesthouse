@@ -20,7 +20,7 @@ const CostEstomator = () => {
     setCurrentState({ ...currentState, [key]: value });
   };
   return (
-    <div className="max-w-screen-xl mx-auto bg-gray-500 text-white py-24 lg:px-10 rounded-xl">
+    <div className=" max-w-screen-xl mx-auto bg-gray-500 text-white py-24 lg:px-10 rounded-xl px-8">
       <div className="">
         <div className="flex gap-16 items-center flex-col md:flex-row">
           <div className="flex flex-col flex-1 w-full">
@@ -53,7 +53,7 @@ const CostEstomator = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 w-full h-64 ">
+          <div className="flex-1 w-full h-64 hidden md:block">
             <Image
               src="/assets/images/1.jpg"
               alt="..."

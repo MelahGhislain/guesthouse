@@ -19,9 +19,17 @@ const Contact = () => {
               Jardin Logbaba côté de quatorzième entre Termoin de Jehová
             </p>
             <p className="mb-2 text-neutral-500 dark:text-neutral-300">
-              + 237 75 60 19 80
+              MTN: +(237) 675 60 19 80
             </p>
-            <p className="mb-2 text-neutral-500 dark:text-neutral-300">info@gmail.com</p>
+            <p className="mb-2 text-neutral-500 dark:text-neutral-300">
+              ORANGE: +(237) 697 49 60 17
+            </p>
+            <a
+              href="mailto:bertrandngwa287@gmail.com"
+              className="mb-2 text-neutral-500 dark:text-neutral-300"
+            >
+              bertrandngwa287@gmail.com
+            </a>
           </div>
           <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 ">
             <form>

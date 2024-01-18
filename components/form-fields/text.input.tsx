@@ -8,16 +8,24 @@ type TextInputProps = {
   onChange: (key: string, value: string) => void;
   placeholder?: string;
   label?: string;
+  type?: string;
 };
 
-const TextInput: FC<TextInputProps> = ({ name, value, onChange, placeholder, label }) => {
+const TextInput: FC<TextInputProps> = ({
+  name,
+  value,
+  onChange,
+  placeholder,
+  label,
+  type,
+}) => {
   return (
     <span>
       {label && (
         <label className="block text-lg font-medium mb-2 dark:text-white">{label}</label>
       )}
       <input
-        type="text"
+        type={type ?? 'text'}
         name={name}
         value={value}
         onChange={(e) => onChange(e.target.name, e.target.value)}

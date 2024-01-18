@@ -114,7 +114,9 @@ const Home: FC<IHomeDataProps> = ({ exploreNearby, liveAnywhere }) => {
             </Link>
           ))}
         </AppSection>
-        <CostEstomator />
+        <div className="container">
+          <CostEstomator />
+        </div>
         {/* bottom banner */}
         <AppBanner />
       </main>
