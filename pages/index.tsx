@@ -13,11 +13,62 @@ import AppNearby from '@/components/atoms/AppNearby';
 import { IExploreNearby, ILiveAnywhere } from 'typings';
 // utils
 import { getExploreNearby, getLiveAnywhere } from 'utils/data';
+import CostEstomator from '@/components/molecules/cost-estimator';
 
 interface IHomeDataProps {
   exploreNearby: IExploreNearby[];
   liveAnywhere: ILiveAnywhere[];
 }
+
+const exploreNearby = [
+  {
+    id: '0f46bb21-7fe5-4031-a7f0-1948cf6828ac',
+    img: '/assets/images/4.jpg',
+    location: 'Sitting Room',
+    distance: 'Comfortable living room',
+  },
+  {
+    id: 'd436e904-f17e-48e3-bd84-f63b87d48b09',
+    img: '/assets/images/2.jpg',
+    location: 'Kitchen',
+    distance: '4.5-hour drive',
+  },
+  {
+    id: 'd83c78cb-9f43-48b9-b76f-c1c0ff131c33',
+    img: '/assets/images/3.jpg',
+    location: 'Toilet',
+    distance: '4.5-hour drive',
+  },
+  {
+    id: 'ac0a496c-f6d2-4637-8fa9-59a197260b16',
+    img: '/assets/images/b3.jpg',
+    location: 'Bed Room',
+    distance: '4-hour drive',
+  },
+];
+
+const liveAnywhere = [
+  {
+    id: '2a5c2d86-fb19-43b1-a0f2-2069c0d1a41f',
+    img: '/assets/live-anywhere/2io.webp',
+    title: '2 Bed Room Appartment',
+  },
+  {
+    id: '4c9d6acf-041f-4a4e-8a86-51475ccde4b0',
+    img: '/assets/live-anywhere/q7j.webp',
+    title: 'Studio Morden',
+  },
+  {
+    id: 'e9278833-f963-4af0-9edc-fe372ded10cb',
+    img: '/assets/live-anywhere/s03.webp',
+    title: 'Entire homes',
+  },
+  {
+    id: 'f588e9ce-32c4-47da-922f-b667265111d2',
+    img: '/assets/live-anywhere/8ix.webp',
+    title: 'Pet allowed',
+  },
+];
 
 const Home: FC<IHomeDataProps> = ({ exploreNearby, liveAnywhere }) => {
   return (
@@ -66,6 +117,7 @@ const Home: FC<IHomeDataProps> = ({ exploreNearby, liveAnywhere }) => {
             </Link>
           ))}
         </AppSection>
+        <CostEstomator />
         {/* bottom banner */}
         <AppBanner />
       </main>
@@ -76,8 +128,8 @@ const Home: FC<IHomeDataProps> = ({ exploreNearby, liveAnywhere }) => {
 };
 
 export const getStaticProps = async () => {
-  const exploreNearby = await getExploreNearby();
-  const liveAnywhere = await getLiveAnywhere();
+  // const exploreNearby = await getExploreNearby();
+  // const liveAnywhere = await getLiveAnywhere();
 
   return {
     props: { exploreNearby, liveAnywhere },
