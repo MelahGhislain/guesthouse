@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-// icons
-import { GlobeAltIcon } from '@heroicons/react/outline';
+
 import Contact from '../organisms/AppContact';
+import { GlobeAltIcon } from '@heroicons/react/outline';
 
 const AppFooter = () => {
   return (
@@ -14,18 +14,7 @@ const AppFooter = () => {
             <span className="mr-0 text-center lg:mr-4">
               © {new Date().getFullYear()} NGWA, Inc.
             </span>
-            <span className="mb-2 mr-0 lg:mr-8 lg:mb-0">
-              |{/* Clone by{' '} */}
-              {/* <a
-                href="https://edwintantawi.vercel.app"
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium text-primary hover:underline"
-              >
-                Edwin Tantawi
-              </a>{' '}
-              | */}
-            </span>
+            <span className="mb-2 mr-0 lg:mr-8 lg:mb-0">|</span>
             <ul className="flex space-x-6 list-disc">
               <li className="hover:underline">
                 <Link href="/">
@@ -49,14 +38,6 @@ const AppFooter = () => {
                   </a>
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/">
-                  <a className="flex items-center">
-                    <span className="mr-1">$</span>
-                    <span className="underline">USD</span>
-                  </a>
-                </Link>
-              </li> */}
             </ul>
             <ul className="flex space-x-6">
               <li className="flex items-center">
