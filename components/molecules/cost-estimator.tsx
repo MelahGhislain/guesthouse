@@ -9,6 +9,27 @@ type StateType = {
   room: string;
   days: string;
 };
+enum RoomType {
+  Appartment = 'Appartment',
+  Studio = 'Studio',
+  SingleRoom = 'Single Room',
+}
+const costs = {
+  [RoomType.Appartment]: {
+    price: 20000,
+    discount: 18000,
+  },
+  [RoomType.Studio]: {
+    price: 15000,
+    discount: 14000,
+  },
+  [RoomType.SingleRoom]: {
+    price: 10000,
+    discount: 9000,
+  },
+};
+
+const rooms = [RoomType.Appartment, RoomType.Studio, RoomType.SingleRoom];
 
 const CostEstomator = () => {
   const [currentState, setCurrentState] = useState<StateType>({
@@ -19,6 +40,17 @@ const CostEstomator = () => {
   const handleChange = (key: string, value: string) => {
     setCurrentState({ ...currentState, [key]: value });
   };
+
+  const calculateCost = () => {
+    const roomType = currentState.room;
+    const days = Number(currentState.days);
+    const getPrice = (price: number, days: number) => price * days;
+    if (days > 7) {
+      return getPrice(costs[roomType]?.discount, days);
+    }
+    return getPrice(costs[roomType]?.price, days);
+  };
+
   return (
     <div className=" max-w-screen-xl mx-auto bg-gray-500 text-white py-24 lg:px-10 rounded-xl px-8">
       <div className="">
@@ -33,10 +65,11 @@ const CostEstomator = () => {
                   value={currentState.room}
                   label="Choose Room Type"
                   onChange={handleChange}
-                  list={['Apartments', 'Studio']}
+                  list={rooms}
                 />
                 <TextInput
                   name="days"
+                  type="number"
                   value={currentState.days}
                   label="Number of days"
                   onChange={handleChange}
@@ -47,7 +80,7 @@ const CostEstomator = () => {
                     Total cost for {currentState.days} days
                   </p>
                   <p className="flex-1 text-end">
-                    XAF <strong>50000</strong>
+                    XAF <strong>{calculateCost()}</strong>
                   </p>
                 </div>
               </div>
