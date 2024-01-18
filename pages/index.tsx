@@ -50,12 +50,12 @@ const exploreNearby = [
 const liveAnywhere = [
   {
     id: '2a5c2d86-fb19-43b1-a0f2-2069c0d1a41f',
-    img: '/assets/live-anywhere/2io.webp',
+    img: '/assets/images/4.jpg',
     title: '2 Bed Room Appartment',
   },
   {
     id: '4c9d6acf-041f-4a4e-8a86-51475ccde4b0',
-    img: '/assets/live-anywhere/q7j.webp',
+    img: '/assets/images/6.jpg',
     title: 'Studio Morden',
   },
   {

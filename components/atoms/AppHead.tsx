@@ -7,9 +7,9 @@ interface IAppHeadProps {
 }
 
 const defaultProps: IAppHeadProps = {
-  title: 'Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences',
+  title: 'Guest house in cameroon',
   description:
-    'Find vacation rentals, cabins, beach houses, unique homes and experiences around the world - all made possible by hosts on Airbnb.',
+    'Find a guest house around Jardin Logbaba côté de quatorzième entre Termoin de Jehová',
 };
 
 const AppHead: FC<IAppHeadProps> = ({ title, description }) => {
