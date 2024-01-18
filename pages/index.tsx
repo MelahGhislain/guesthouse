@@ -9,10 +9,7 @@ import AppSection from '@/components/atoms/AppSection';
 import AppBanner from '@/components/atoms/AppBanner';
 import AppFooter from '@/components/atoms/AppFooter';
 import AppNearby from '@/components/atoms/AppNearby';
-// typings
 import { IExploreNearby, ILiveAnywhere } from 'typings';
-// utils
-import { getExploreNearby, getLiveAnywhere } from 'utils/data';
 import CostEstomator from '@/components/molecules/cost-estimator';
 
 interface IHomeDataProps {
@@ -29,21 +26,21 @@ const exploreNearby = [
   },
   {
     id: 'd436e904-f17e-48e3-bd84-f63b87d48b09',
-    img: '/assets/images/2.jpg',
+    img: '/assets/images/k1.jpg',
     location: 'Kitchen',
-    distance: '4.5-hour drive',
+    distance: 'Fully equiped kitchen',
   },
   {
     id: 'd83c78cb-9f43-48b9-b76f-c1c0ff131c33',
     img: '/assets/images/3.jpg',
     location: 'Toilet',
-    distance: '4.5-hour drive',
+    distance: 'Clean toilet',
   },
   {
     id: 'ac0a496c-f6d2-4637-8fa9-59a197260b16',
     img: '/assets/images/b3.jpg',
     location: 'Bed Room',
-    distance: '4-hour drive',
+    distance: 'Comfortable bed room',
   },
 ];
 
@@ -60,7 +57,7 @@ const liveAnywhere = [
   },
   {
     id: 'e9278833-f963-4af0-9edc-fe372ded10cb',
-    img: '/assets/live-anywhere/s03.webp',
+    img: '/assets/images/k2.jpg',
     title: 'Entire homes',
   },
   {
