@@ -77,7 +77,7 @@ const CostEstomator = () => {
                 />
                 <div className="flex ">
                   <p className="flex-1 text-xl font-bold">
-                    Total cost for {currentState.days} days
+                    Total cost of {currentState.room} for {currentState.days} days
                   </p>
                   <p className="flex-1 text-end">
                     XAF <strong>{calculateCost()}</strong>
